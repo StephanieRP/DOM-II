@@ -2,12 +2,20 @@
 let links = document.querySelectorAll(".nav-link");
 links.forEach(function(a) {
   a.addEventListener("click", function(event) {
+    event = a;
+    event.style.color = "green";
     event.preventDefault();
   });
   a.addEventListener("drag", function(event) {
     event = a;
     event.style.background = "yellow";
   });
+});
+
+let navigation = document.querySelector(".main-navigation");
+navigation.addEventListener("click", function() {
+  this.style.background = "pink";
+  this.stopPropagation();
 });
 
 let logo = document.querySelector(".logo-heading");
@@ -91,5 +99,4 @@ let divs = document.querySelector(".content-pick");
 divs.addEventListener("mouseleave", function(event) {
   event = divs;
   event.style.background = "yellow";
-  event.stopPropagation();
 });
