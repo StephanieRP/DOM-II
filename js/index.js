@@ -10,6 +10,11 @@ links.forEach(function(a) {
   });
 });
 
+let logo = document.querySelector(".logo-heading");
+logo.addEventListener("click", function(event) {
+  TweenLite.to(".logo-heading", 2, { y: 90, ease: Elastic.easeOut });
+});
+
 //Modal fun!!
 let modalDiv = document.getElementById("modal");
 window.addEventListener("load", function(event) {
@@ -69,23 +74,22 @@ mainBtn.forEach(function(buttons) {
   buttons.addEventListener("mousedown", function(event) {
     event = buttons;
     event.style.background = "crimson";
+    TweenMax.to(".btn", 5, { x: 100, ease: Bounce.easeOut });
   });
 });
 
 // destination h4
 let hFour = document.querySelectorAll("h4");
+hFour.forEach(function(headings) {
+  headings.addEventListener("mouseleave", function(event) {
+    event = headings;
+    event.style.color = "green";
+  });
+});
+
 let divs = document.querySelector(".content-pick");
 divs.addEventListener("mouseleave", function(event) {
   event = divs;
   event.style.background = "yellow";
   event.stopPropagation();
-});
-
-hFour.forEach(function(headings) {
-  headings.addEventListener("mouseleave", function(event) {
-    event = headings;
-    // event.style.fontSize = "3px";
-    console.log(event);
-    event.style.color = "green";
-  });
 });
