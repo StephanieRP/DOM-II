@@ -95,8 +95,8 @@ hFour.forEach(function(headings) {
   });
 });
 
-let divs = document.querySelector(".content-pick");
-divs.addEventListener("mouseleave", function(event) {
-  event = divs;
+let contentDiv = document.querySelector(".content-pick");
+contentDiv.addEventListener("mouseleave", function(event) {
+  event = contentDiv;
   event.style.background = "yellow";
 });
