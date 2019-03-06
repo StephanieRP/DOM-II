@@ -215,6 +215,70 @@ img {
   color: #212529;
   text-decoration: none;
 }
+#modal {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(189, 184, 184, 0.8);
+  display: none;
+}
+#modal .subscription {
+  background: #FFEBCD;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: 60%;
+}
+#modal .subscription p {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 2rem;
+}
+#modal .subscription input {
+  width: 90%;
+  padding: 1rem;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+#modal .subscription .buttons {
+  display: flex;
+}
+#modal .subscription .buttons button {
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 35px;
+  background-color: #17A2B8;
+  color: #FFFFFF;
+  border: 1px solid #C0C0C0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 5rem;
+  outline: none;
+}
+@media (max-width: 500px) {
+  #modal .subscription .buttons button {
+    width: 100%;
+  }
+}
+#modal .subscription .buttons button:hover {
+  background: #FFFFFF;
+  color: #17A2B8;
+}
 .footer {
   width: 100%;
   border-top: 2px dashed #C0C0C0;
