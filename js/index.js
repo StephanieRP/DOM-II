@@ -1,3 +1,10 @@
+let navigation = document.querySelector(".main-navigation");
+navigation.addEventListener("click", function(event) {
+  event = navigation;
+  event.style.background = "pink";
+  event.stopPropagation();
+});
+
 // stop A tags from refreshing the site
 let links = document.querySelectorAll(".nav-link");
 links.forEach(function(a) {
@@ -10,12 +17,6 @@ links.forEach(function(a) {
     event = a;
     event.style.background = "yellow";
   });
-});
-
-let navigation = document.querySelector(".main-navigation");
-navigation.addEventListener("click", function() {
-  this.style.background = "pink";
-  this.stopPropagation();
 });
 
 let logo = document.querySelector(".logo-heading");
